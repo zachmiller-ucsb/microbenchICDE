@@ -49,7 +49,7 @@ for T in 3 5 7; do
   # 3. readrandom
   # 4. seekrandom
   echo "T = $T"
-  universal_max_size_amplification_percent=$( python3 -c "print( int( 100 / ( $T - 1 ) ) )" )
+  universal_max_size_amplification_percent=$( python3 -c "print( int( 100 * $T ) )" )
   universal_min_merge_width=$T
   universal_max_merge_width=$( python3 -c "print( $universal_min_merge_width + 1 )" )
   echo "universal_max_size_amplification_percent = $universal_max_size_amplification_percent"
